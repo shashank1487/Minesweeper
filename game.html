@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Minesweeper</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,300"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="css/game.css" />
+  </head>
+  <body>
+    <h1>Minesweeper</h1>
+    <div class="game">
+      <div class="game-container">
+        <div class="game-level-section">
+          <select class="game-level">
+            <option value="1" selected>Beginner</option>
+            <option value="2">Intermediate</option>
+            <option value="3">Advanced</option>
+            <option value="4">Custom</option>
+          </select>
+        </div>
+        <div class="game-board-section">
+          <div class="game-layout"></div>
+          <div class="game-footer">
+            <button class="game-restart">Restart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="game-metadata">
+        <div class="game-mines">
+          <span class="game-mines-count"></span>
+        </div>
+        <div class="game-timer">
+          <span class="game-time"></span>
+        </div>
+      </div>
+
+      <div class="game-error-section">
+        <span class="game-error"></span>
+      </div>
+    </div>
+    <script type="module">
+      import { start_game } from "./js/Main.js";
+      start_game();
+    </script>
+  </body>
+</html>
